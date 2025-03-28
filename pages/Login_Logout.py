@@ -19,6 +19,11 @@ def login(Authorization, API_URL):
 
 
 #print response with indentaion for better readability
+LOGIN_STATUS = os.environ.get("LOGIN_STATUS", "1")
+# set environment variables
+if LOGIN_STATUS == "1":
+    os.environ["LOGIN_STATUS"] = "1"
+    
 if os.environ["LOGIN_STATUS"] == "1":
     API_KEY = st.text_input("Enter your API key", type="password") 
     API_URL = st.text_input("Enter the API URL", "https://arc.rexter.co.uk/api/v1")

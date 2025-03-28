@@ -16,7 +16,7 @@ def main():
     pages = {
         "Chating Agent": [
             st.Page("pages/Chat.py", title="Anything LLM"),
-            st.Page("pages/Groq.py", title="Groq Chat"),
+            # st.Page("pages/Groq.py", title="Groq Chat"),
         ],
         "Resources": [
             st.Page("pages/Login_Logout.py", title="Login and Logout"),
