@@ -2,5 +2,4 @@
 *__pycache__*
 *.pyc
 creds.env
-# streamlit secrets
-*.streamlit/secrets.toml
+*.streamlit*
