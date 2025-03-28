@@ -6,6 +6,7 @@ from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 import random
 from datetime import datetime
+from api_anythingllm import ArcAssistAPI
 
 # Placeholder for the API key - you can retrieve it securely from your environment or other sources.
 groq_api_key = st.secrets["groq_api_key"]
