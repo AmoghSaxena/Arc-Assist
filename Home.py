@@ -10,7 +10,7 @@ def main():
     )
     
     st.title("Welcome to the Chatbot Application")
-    st.sidebar.title("Navigation")
+    # st.sidebar.title("Navigation")
     
     # page = st.sidebar.selectbox("Select a page:", ["Chatbot"])
     pages = {
@@ -21,6 +21,9 @@ def main():
         "Resources": [
             st.Page("pages/Login_Logout.py", title="Login and Logout"),
         ],
+        # "Testing": [
+        #     st.Page("pages/TestingPage.py", title="Testing Page"),
+        # ]
     }
 
     pg = st.navigation(pages)

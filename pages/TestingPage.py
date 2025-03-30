@@ -1,3 +1,6 @@
+import pandas as pd
+import requests
+import os
 import sys
 sys.path.append("..")
 from src.api_anythingllm import ArcAssistAPI
@@ -5,15 +8,10 @@ import streamlit as st
 import json
 
 
-def clear_text():
-    st.session_state["text"] = ""
-
-# Initialize the API client
 api_key = st.secrets["api_key"]  # Assuming the API key is stored in Streamlit secrets
 api_client = ArcAssistAPI(api_key)
 
-# Streamlit page title
-st.title("Chatbot Interface")
+st.title("Chatbot Testing")
 
 
 def get_workspace_status():
@@ -54,7 +52,7 @@ def get_workspace_chats(page, thread_slug):
             
         # Also display the workspace chats in json format minimized
         # st.write("Workspace chats:")
-        # st.json(workspace_chats['history'], expanded=False)
+        st.json(workspace_chats['history'], expanded=False)
         return True
     else:
         st.error("Error: Unable to get workspace chats.")
