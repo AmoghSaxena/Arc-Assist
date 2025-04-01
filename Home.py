@@ -14,12 +14,12 @@ def main():
     
     # page = st.sidebar.selectbox("Select a page:", ["Chatbot"])
     pages = {
+        "Login": [
+            st.Page("pages/Login_Logout.py", title="Login and Logout"),
+        ],
         "Chating Agent": [
             st.Page("pages/Chat.py", title="Anything LLM"),
             # st.Page("pages/Groq.py", title="Groq Chat"),
-        ],
-        "Resources": [
-            st.Page("pages/Login_Logout.py", title="Login and Logout"),
         ],
         # "Testing": [
         #     st.Page("pages/TestingPage.py", title="Testing Page"),

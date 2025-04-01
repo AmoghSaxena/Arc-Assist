@@ -1,11 +1,16 @@
 import requests
 import time
 import logging
+import os
+import sys
+sys.path.append("..")
+from pages.Login_Logout import API_URL
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ArcAssistAPI:
-    def __init__(self, api_key, base_url="https://arc.rexter.co.uk/api/v1"):
+    # def __init__(self, api_key, base_url="https://arc.rexter.co.uk/api/v1"):
+    def __init__(self, api_key, base_url=API_URL):
         self.api_key = api_key
         self.base_url = base_url.rstrip("/")
         self.headers = {

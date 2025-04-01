@@ -20,6 +20,7 @@ def login(Authorization, API_URL):
 
 #print response with indentaion for better readability
 LOGIN_STATUS = os.environ.get("LOGIN_STATUS", "1")
+API_URL = os.environ.get("API_URL", "API")
 # set environment variables
 if LOGIN_STATUS == "1":
     os.environ["LOGIN_STATUS"] = "1"
@@ -37,6 +38,7 @@ if os.environ["LOGIN_STATUS"] == "1":
             os.environ["API_KEY"] = API_KEY
             os.environ["API_URL"] = API_URL
             st.success("Login successful")
+            st.write("You are now logged in: ", os.environ["API_URL"])
 
 else:
     if st.button("Logout"):
