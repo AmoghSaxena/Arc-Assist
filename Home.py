@@ -9,7 +9,6 @@ def main():
         initial_sidebar_state='expanded'  # Keep the sidebar expanded initially
     )
     
-    st.title("Welcome to the Chatbot Application")
     # st.sidebar.title("Navigation")
     
     # page = st.sidebar.selectbox("Select a page:", ["Chatbot"])
@@ -21,9 +20,9 @@ def main():
             st.Page("pages/Chat.py", title="Anything LLM"),
             # st.Page("pages/Groq.py", title="Groq Chat"),
         ],
-        # "Testing": [
-        #     st.Page("pages/TestingPage.py", title="Testing Page"),
-        # ]
+        "Testing": [
+            st.Page("pages/TestingPage.py", title="Testing Page"),
+        ]
     }
 
     pg = st.navigation(pages)
